@@ -26,7 +26,7 @@ void initEPWM1()
     //
     // Set-up TBCLK
     //
-    EPWM_setTimeBasePeriod(EPWM1_BASE, 12000U);
+    EPWM_setTimeBasePeriod(EPWM1_BASE, 10000U);
     EPWM_setPhaseShift(EPWM1_BASE, 0U);
     EPWM_setTimeBaseCounter(EPWM1_BASE, 0U);
     EPWM_setTimeBaseCounterMode(EPWM1_BASE, EPWM_COUNTER_MODE_UP_DOWN);
@@ -49,18 +49,18 @@ void initEPWM1()
     //
     // Set-up compare
     //
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, 6000U);
+    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, 1000U);
 
     //
     // Set actions
     //
     EPWM_setActionQualifierAction(EPWM1_BASE,
                                   EPWM_AQ_OUTPUT_A,
-                                  EPWM_AQ_OUTPUT_HIGH,
+                                  EPWM_AQ_OUTPUT_LOW,
                                   EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
     EPWM_setActionQualifierAction(EPWM1_BASE,
                                   EPWM_AQ_OUTPUT_A,
-                                  EPWM_AQ_OUTPUT_LOW,
+                                  EPWM_AQ_OUTPUT_HIGH,
                                   EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
 }
 
@@ -71,7 +71,7 @@ void initEPWM2()
     //
     // Set-up TBCLK
     //
-    EPWM_setTimeBasePeriod(EPWM2_BASE, 6000U);
+    EPWM_setTimeBasePeriod(EPWM2_BASE, 5000U);
     EPWM_setPhaseShift(EPWM2_BASE, 0U);
     EPWM_setTimeBaseCounter(EPWM2_BASE, 0U);
     EPWM_setTimeBaseCounterMode(EPWM2_BASE, EPWM_COUNTER_MODE_UP_DOWN);
@@ -87,7 +87,7 @@ void initEPWM2()
     //
     // Set-up compare
     //
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, 3000U);
+    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, 500U);
 
     //
     // Set actions
